@@ -1,4 +1,4 @@
-# What is functional programming?
+What is functional programming?
 ======================
 
 In OOP, a class is divided up properties and methods. 
