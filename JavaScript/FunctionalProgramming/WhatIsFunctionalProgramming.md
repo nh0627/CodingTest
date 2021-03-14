@@ -1,7 +1,7 @@
 What is functional programming?
 ======================
 
-In OOP, a class is divided up properties and methods. 
+In OOP, a class is divided up by properties and methods. 
 Functional programming has the idea as well of separating concerns but they also separate data and functions.
 Most functional programming languages don't have these concepts of classes and methods that belong to objects,
 instead functions operate on well-defined data structures like arrays and objects 
@@ -69,6 +69,7 @@ hof(x => return(x));
 
 * Closure
 A function accesses a variable defined outside of the function scope, which is the scope of the parent.
+> There is no clear way to create private methods in JS, but the closure can ‘private’ the methods.
 
 ```
 const closure = function() {
@@ -95,8 +96,6 @@ curriedMultiply(3)(5); // 15 again!
 // When we want to remember "3", we can simply make another function below. This will remember 3, till the end of the program.
 const curriedMultiply3 = curriedMultiply(3);
 ```
-
-* Compose and Pipe
 
 ### Source: 
 [Advanced Javascript Concepts](https://udemy.com/course/advanced-javascript-concepts/)
