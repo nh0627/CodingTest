@@ -17,7 +17,7 @@ rather than actually belonging to that data structure like an object (keep it st
 * Predictable
 
 ### Functional Programming Keywords
-#### [PureFunction](/PureFunction.md)
+#### [PureFunction](PureFunction.md)
 
 #### Idempotence
 The idea of Idempotence is a function that always returns or does what we expected to do. The result won’t change beyond initial calling.
@@ -84,7 +84,7 @@ getCounter();
 ```
 
 #### Currying
-instead of a function that can take multiple parameters, with currying we can make a function that takes one parameter at a time.
+Instead of a function that can take multiple parameters, with currying we can make a function that takes one parameter at a time.
 
 ```
 const multiply = (a, b) => a * b;
