@@ -61,5 +61,5 @@ b(7); // The same result with the same input
 * They're easier to test because there are no dependencies (such as logging, Ajax, database, etc.) that need to be mocked.
 
 ### Source: 
-[Udemy: Advanced Javascript Concepts](https://udemy.com/course/advanced-javascript-concepts/)
+[Udemy: Advanced Javascript Concepts](https://udemy.com/course/advanced-javascript-concepts/), 
 [opensource.com](https://opensource.com/article/17/6/functional-javascript)

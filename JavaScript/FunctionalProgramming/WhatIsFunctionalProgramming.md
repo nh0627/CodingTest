@@ -17,7 +17,7 @@ rather than actually belonging to that data structure like an object (keep it st
 * Predictable
 
 ### Functional Programming Keywords
-#### [PureFunction](../PureFunction.md)
+#### [PureFunction](/PureFunction.md)
 
 #### Idempotence
 The idea of Idempotence is a function that always returns or does what we expected to do. The result won’t change beyond initial calling.
@@ -98,5 +98,5 @@ const curriedMultiply3 = curriedMultiply(3);
 ```
 
 ### Source: 
-[Advanced Javascript Concepts](https://udemy.com/course/advanced-javascript-concepts/)
+[Udemy: Advanced Javascript Concepts](https://udemy.com/course/advanced-javascript-concepts/), 
 [stackoverflow](https://stackoverflow.com/questions/4801282/are-idempotent-functions-the-same-as-pure-functions)
