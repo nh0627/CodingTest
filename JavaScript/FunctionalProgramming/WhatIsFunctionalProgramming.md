@@ -17,6 +17,7 @@ rather than actually belonging to that data structure like an object (keep it st
 * Predictable
 
 ### Functional Programming Keywords
+
 #### [PureFunction](PureFunction.md)
 
 #### Idempotence
