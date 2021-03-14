@@ -1,6 +1,6 @@
 /**
- * Complete the solution function that removes the consecutive numbers from the array and returns the remaining numbers.
- * Example:
+ * Complete the solution that removes the consecutive numbers from the array and returns the remaining numbers.
+ * Example)
  * arr = [1, 1, 3, 3, 0, 1, 1], returns [1, 3, 0, 1]
  * arr = [4, 4, 4, 3, 3], returns [4, 3]
  */
