@@ -9,7 +9,7 @@
  */
 
 // My solution
-function solution(citations) {
+function mySolution(citations) {
     let answer = 0;
     let count = 0;
     let indexes = [];
@@ -26,7 +26,7 @@ function solution(citations) {
 }
 
 // Best Solution
-function solution(citations) {
+function bestSolution(citations) {
     citations = citations.sort((a, b) => b - a);
     var i = 0;
     while (i + 1 <= citations[i]) {

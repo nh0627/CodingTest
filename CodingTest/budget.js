@@ -8,7 +8,7 @@
  */
 
 // My solution
-function mySolution(d, budget) {
+function solution(d, budget) {
 
     d.sort((a, b) => a - b);
 
