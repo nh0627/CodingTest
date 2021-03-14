@@ -60,15 +60,6 @@ b(7); // The same result with the same input
 * The return value can be cached or "memoized" to avoid recomputing it in the future.
 * They're easier to test because there are no dependencies (such as logging, Ajax, database, etc.) that need to be mocked.
 
-## Perfect Function💥💥
-* Should do one task only
-* Return statement
-* Pure
-* No shared state
-* Immutable state
-* Composable
-* Predictable
-
 ### Source: 
-[Udemy: Advanced Javascript Concepts](udemy.com/course/advanced-javascript-concepts/)
+[Udemy: Advanced Javascript Concepts](https://udemy.com/course/advanced-javascript-concepts/)
 [opensource.com](https://opensource.com/article/17/6/functional-javascript)
