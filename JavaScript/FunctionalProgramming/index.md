@@ -61,7 +61,7 @@ console.log(obj2.name); // NaNa
 ```
 
 #### Higher Order Function (HOF)
-A function either takes one or more functions as arguments or returns a function as a result.
+A function either takes one or more functions as arguments or returns a function as a result. This is possible because a function is the first citizen in JS.
 
 ```
 const hof = (fn) => fn(5);
@@ -69,7 +69,7 @@ hof(x => return(x));
 ```
 
 #### Closure
-A function accesses a variable defined outside of the function scope, which is the scope of the parent.
+A function accesses a variable defined outside of the function scope, which is the scope of the parent. Beneficial for memory efficiency✔
 > There is no clear way to create private methods in JS, but the closure can ‘private’ the methods.
 
 ```
