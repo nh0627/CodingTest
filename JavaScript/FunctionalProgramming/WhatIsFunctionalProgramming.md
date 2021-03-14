@@ -25,14 +25,78 @@ e.g. Deleting a record by GUID (not by count) is idempotent, because the row sta
 > An idempotent function can cause idempotent side-effects. A pure function cannot.
 
 * Imperative vs Declarative
+Imperative code is code that tells the machine what to do and how to do it, but declarative code tells what to do and what should happen.
+A computer is better at being imperative, which is it needs to know how to do things.
+We on the other hand as humans are more declarative.
+
+```
+const arr = [1, 2, 3];
+
+// Imperative
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+// Declarative
+arr.forEach(number => console.log(number));
+```
 
 * Immutability
+In OOP we have classes that you can change the property, but in functional programming, it is different.
+The idea is of immutability that is not changing state but instead making copies of the state and returning a new state every time.
+> I am just going to borrow this data and I am only going to make a new copy of this data so other people can still use this.
 
-* HOF and Closure
+```
+const obj1 = { name: "Lee" };
+function clone(obj) {
+    return {...obj}; // Pure function
+}
+
+const obj2 = clone(obj1);
+obj2.name = "Nana";
+
+console.log(obj1.name); // Lee
+console.log(obj2.name); // NaNa
+```
+
+* Higher Order Function (HOF)
+A function either takes one or more functions as arguments or returns a function as a result.
+
+```
+const hof = (fn) => fn(5);
+hof(x => return(x));
+```
+
+* Closure
+A function accesses a variable defined outside of the function scope, which is the scope of the parent.
+
+```
+const closure = function() {
+    let count = 55;
+    return function() {
+        return count; // It remembers "count" which is declared outsize of its scope.
+    }
+}
+const getCounter() = closure();
+getCounter();
+
+```
 
 * Currying
+instead of a function that can take multiple parameters, with currying we can make a function that takes one parameter at a time.
 
-* Partial Application
+```
+const multiply = (a, b) => a * b;
+multiply(3, 5); // 15
+
+const curriedMultiply = a => b => a * b;
+curriedMultiply(3)(5); // 15 again!
+
+// When we want to remember "3", we can simply make another function below. This will remember 3, till the end of the program.
+const curriedMultiply3 = curriedMultiply(3);
+```
+
+* Compose and Pipe
 
 ### Source: 
 [Advanced Javascript Concepts](https://udemy.com/course/advanced-javascript-concepts/)
