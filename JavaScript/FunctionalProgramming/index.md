@@ -98,6 +98,49 @@ curriedMultiply(3)(5); // 15 again!
 const curriedMultiply3 = curriedMultiply(3);
 ```
 
+### Functional programming example
+```
+const user = {
+    name: "Kim",
+    active: true,
+    cart: [],
+    purchases: []
+}
+
+// There is a better packages for compose to use, but for now go with the customized one.
+const compose = (f, g) => (...args) => f(g(...args));
+
+const purchaseItem = (...fns) => fns.reduce(compose);
+
+const addItemToCart = (user, item) => {
+    const updateCart = user.cart.concat(item);
+    return Object.assign({}, user, { cart: updateCart });
+}
+
+const applyTaxToItems = user => {
+    const { cart } = user;
+    const taxRate = 1.3;
+    const updatedCart = cart.map(item => { return { name: item.name, price: item.price * taxRate } })
+    return Object.assign({}, user, { cart: updatedCart })
+}
+
+const buyItem = user => {
+    const updatedPurchases = [...user.cart];
+    return Object.assign({}, user, { purchases: updatedPurchases });
+}
+
+const emptyCart = user => {
+    return Object.assign({}, user, { cart: [] });
+}
+
+purchaseItem(
+    emptyCart,
+    buyItem,
+    applyTaxToItems,
+    addItemToCart
+)(user, { name: "laptop", price: 200 });
+```
+
 ### Source: 
 [Udemy: Advanced Javascript Concepts](https://udemy.com/course/advanced-javascript-concepts/), 
 [stackoverflow](https://stackoverflow.com/questions/4801282/are-idempotent-functions-the-same-as-pure-functions)
