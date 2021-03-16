@@ -11,6 +11,19 @@ Hoisting
 2. The execution phase
 During the execution phase, the JavaScript engine executes the code line by line. In this phase, it assigns values to variables and executes the function calls. For every function call, the JavaScript engine creates a new Function Execution Context. The Function Execution Context is similar to the Global Execution Context, but instead of creating the global object, it creates the arguments object that contains a reference to all the parameters passed into the function.
 
+```js
+var favouriteFood = "grapes";
+
+var foodThoughts = function() {
+    // It starts new excution context here, so favouriteFood right below prints undefined 
+    console.log("Original favorite food: " + favouriteFood); // undefined
+    var favouriteFood = "kimchi";
+    console.log("New favorite food: " + favouriteFood); // kimchi
+}
+
+foodThoughts();
+```
+
 ## Lexical Environment
 In Javascript our lexical scope (available data + variables where the function was defined) determines our available variables. Not where the function is called(dynamic scope => "this" keyword).
 
@@ -23,20 +36,7 @@ Variable hoisting means the JavaScript engine moves the variable declarations to
 ### Function hoisting
 Function declarations is fully hoisted. During the creation phase of the execution context, the JavaScript engine places the function declaration in the heap memory. Thus, we can use a function if it is declared somewhere in the same context. In case of function expressions (or arrow functions), it works like the variable hositing (The variable is hoisted up and it is assigned undefined).
 
-```js
-var favouriteFood = "grapes";
-
-var foodThoughts = function() {
-    // It starts new excution context here, so favouriteFood right below prints undefined 
-    console.log("Original favorite food: " + favouriteFood); // undefined
-    var favouriteFood = "kimchi";
-    console.log("New favorite food: " + favouriteFood); // kimchi
-}
-
-foodThoughts();
-
-```
 
 ### Source: 
 [Udemy: Advanced Javascript Concepts](https://udemy.com/course/advanced-javascript-concepts/),
-[JavaScript Tutorial](https://www.javascripttutorial.net/javascript-execution-context/)
+[JavaScript Tutorial](https://www.javascripttutorial.net/)
