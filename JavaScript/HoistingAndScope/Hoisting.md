@@ -1,4 +1,4 @@
-Hoisting & Scope
+Hoisting
 ===============
 
 ## Execution context
