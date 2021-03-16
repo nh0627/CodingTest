@@ -9,13 +9,14 @@ Hoisting
 * Store the function declarations in the memory heap and variables within the global execution context with the initial values as undefined. 
 
 2. The execution phase
-During the execution phase, the JavaScript engine executes the code line by line. In this phase, it assigns values to variables and executes the function calls. For every function call, the JavaScript engine creates a new Function Execution Context. The Function Execution Context is similar to the Global Execution Context, but instead of creating the global object, it creates the arguments object that contains a reference to all the parameters passed into the function.
+During the execution phase, the JavaScript engine executes the code line by line. In this phase, it assigns values to variables and executes the function calls. For every function call, the JavaScript engine creates a new Function Execution Context. The Function Execution Context is similar to the Global Execution Context, but instead of creating the global object, it creates the arguments object that contains a reference to all the parameters passed into the function. Further, each excution context has each variable environment.
 
 ```js
 var favouriteFood = "grapes";
 
 var foodThoughts = function() {
     // It starts new excution context here, so favouriteFood right below prints undefined 
+    // "Each excution context has each variable environment"
     console.log("Original favorite food: " + favouriteFood); // undefined
     var favouriteFood = "kimchi";
     console.log("New favorite food: " + favouriteFood); // kimchi
