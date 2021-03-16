@@ -5,7 +5,7 @@ Pure Function
 * *No side effects* - A function cannot modify anything outside of itself.
 One of the problems with having side effects is that reusing shared state something like a global variable that can interact with anything and the order of the function calls matter and that can cause a lot of bugs.
 
-```
+```js
 // Side effect
 
 const array = [1, 2, 3];
@@ -36,7 +36,7 @@ removeLastItem(array);
 
 * *Referential Transparency* - A function has to always return the same output given the same input.
 
-```
+```js
 function a(num1, num2) {
     return num1 + num2;
 }
@@ -66,7 +66,7 @@ where we take a piece of data we take it through all functions and then finally 
 because all those functions are pure and all those functions well are composed of all.
 In addition, pipe is simple, only the order will be different from compose.
 
-```
+```js
 // Compose
 const compose = (f, g) => data => f(g(data));
 // Pipe

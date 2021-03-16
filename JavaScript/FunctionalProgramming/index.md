@@ -30,7 +30,7 @@ Imperative code is code that tells the machine what to do and how to do it, but 
 A computer is better at being imperative, which is it needs to know how to do things.
 We on the other hand as humans are more declarative.
 
-```
+```js
 const arr = [1, 2, 3];
 
 // Imperative
@@ -47,7 +47,7 @@ In OOP we have classes that you can change the property, but in functional progr
 The idea is of immutability that is not changing state but instead making copies of the state and returning a new state every time.
 > I am just going to borrow this data and I am only going to make a new copy of this data so other people can still use this.
 
-```
+```js
 const obj1 = { name: "Lee" };
 function clone(obj) {
     return {...obj}; // Pure function
@@ -63,7 +63,7 @@ console.log(obj2.name); // NaNa
 ### Higher Order Function (HOF)
 A function either takes one or more functions as arguments or returns a function as a result. This is possible because a function is the first citizen in JS.
 
-```
+```js
 const hof = (fn) => fn(5);
 hof(x => return(x));
 ```
@@ -72,7 +72,7 @@ hof(x => return(x));
 A function accesses a variable defined outside of the function scope, which is the scope of the parent. Beneficial for memory efficiency✔
 > There is no clear way to create private methods in JS, but the closure can ‘private’ the methods.
 
-```
+```js
 const closure = function() {
     let count = 55;
     return function() {
@@ -87,7 +87,7 @@ getCounter();
 ### Currying
 Instead of a function that can take multiple parameters, with currying we can make a function that takes one parameter at a time.
 
-```
+```js
 const multiply = (a, b) => a * b;
 multiply(3, 5); // 15
 
@@ -99,7 +99,7 @@ const curriedMultiply3 = curriedMultiply(3);
 ```
 
 ### Functional programming example
-```
+```js
 const user = {
     name: "Kim",
     active: true,

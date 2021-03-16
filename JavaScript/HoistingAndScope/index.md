@@ -23,6 +23,20 @@ Variable hoisting means the JavaScript engine moves the variable declarations to
 ### Function hoisting
 Function declarations is fully hoisted. During the creation phase of the execution context, the JavaScript engine places the function declaration in the heap memory. Thus, we can use a function if it is declared somewhere in the same context. In case of function expressions (or arrow functions), it works like the variable hositing (The variable is hoisted up and it is assigned undefined).
 
+```js
+var favouriteFood = "grapes";
+
+var foodThoughts = function() {
+    // It starts new excution context here, so favouriteFood right below prints undefined 
+    console.log("Original favorite food: " + favouriteFood); // undefined
+    var favouriteFood = "kimchi";
+    console.log("New favorite food: " + favouriteFood); // kimchi
+}
+
+foodThoughts();
+
+```
+
 ### Source: 
 [Udemy: Advanced Javascript Concepts](https://udemy.com/course/advanced-javascript-concepts/),
 [JavaScript Tutorial](https://www.javascripttutorial.net/javascript-execution-context/)
