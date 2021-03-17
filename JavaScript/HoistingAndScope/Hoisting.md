@@ -25,9 +25,6 @@ var foodThoughts = function() {
 foodThoughts();
 ```
 
-## Lexical Environment
-In Javascript our lexical scope (available data + variables where the function was defined) determines our available variables. Not where the function is called(dynamic scope => "this" keyword).
-
 ## **Hoisting**
 During the creation phase, the JavaScript engine moves the variable and function declarations to the top of your code. This feature is known as hoisting in JavaScript.
 
@@ -36,7 +33,6 @@ Variable hoisting means the JavaScript engine moves the variable declarations to
 
 ### Function hoisting
 Function declarations is fully hoisted. During the creation phase of the execution context, the JavaScript engine places the function declaration in the heap memory. Thus, we can use a function if it is declared somewhere in the same context. In case of function expressions (or arrow functions), it works like the variable hositing (The variable is hoisted up and it is assigned undefined).
-
 
 ### Source: 
 [Udemy: Advanced Javascript Concepts](https://udemy.com/course/advanced-javascript-concepts/),
