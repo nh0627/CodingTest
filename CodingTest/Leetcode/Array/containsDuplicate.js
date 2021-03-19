@@ -6,17 +6,17 @@
  * @param {number[]} nums
  * @return {boolean}
  */
- var containsDuplicate = function(nums) {
+var containsDuplicate = function (nums) {
     const hash = {};
     let result = false;
-    
+
     for (const num of nums) {
-        if (typeof hash[num] === "undefined") { 
+        if (typeof hash[num] === "undefined") {
             hash[num] = 0;
         }
-        
-        ++hash[num];       
-        
+
+        ++hash[num];
+
         if (hash[num] > 1) {
             result = true;
             break;
