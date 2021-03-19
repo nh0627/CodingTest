@@ -6,6 +6,7 @@
  * Example)
  * citations: [3, 0, 6, 1, 5] result: 3
  * citations: [22, 42] result: 2
+ * 
  */
 
 // My solution
