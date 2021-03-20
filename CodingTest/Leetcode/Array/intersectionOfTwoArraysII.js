@@ -8,12 +8,12 @@
  * @param {number[]} nums2
  * @return {number[]}
  */
- var intersect = function(nums1, nums2) {
+const intersect = function (nums1, nums2) {
     const answer = [];
-    
+
     for (const num of nums1) {
         const num2Index = nums2.indexOf(num);
-        if ( num2Index >= 0) {
+        if (num2Index >= 0) {
             answer.push(num);
             nums2.splice(num2Index, 1);
         }

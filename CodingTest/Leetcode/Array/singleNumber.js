@@ -6,7 +6,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var singleNumber = function (nums) {
+const singleNumber = function (nums) {
     let answer = 0;
     const hash = {};
 

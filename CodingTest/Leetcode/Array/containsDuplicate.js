@@ -6,7 +6,7 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-var containsDuplicate = function (nums) {
+const containsDuplicate = function (nums) {
     const hash = {};
     let result = false;
 
