@@ -7,17 +7,17 @@
  * @param {string} s
  * @return {number}
  */
- var firstUniqChar = function(s) {
+var firstUniqChar = function (s) {
     const hash = {};
     let answer = -1;
     const sArr = s.split("");
-    
+
     sArr.forEach(letter => {
         if (typeof hash[letter] === "undefined") hash[letter] = 0;
         ++hash[letter];
     });
-    
+
     answer = sArr.findIndex(letter => hash[letter] === 1);
-    
+
     return answer;
 };

@@ -7,10 +7,10 @@
  * @param {number} x
  * @return {number}
  */
-const reverse = function(x) {
+const reverse = function (x) {
     let answer = 0;
-    
-    while ( x !== 0) {
+
+    while (x !== 0) {
         const pop = x % 10;
         x = parseInt(x / 10);
         answer = answer * 10 + pop;
