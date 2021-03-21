@@ -16,27 +16,36 @@ public class Stack {
 		this.stackArray = new long[maxSize];
 		this.top = -1;
 	}
-	
+
 	public void push(long j) {
-		top++;
-		this.stackArray[top] = j;
+		if (isFull()) {
+			System.out.println("The stack is already full!");
+		} else {
+			top++;
+			this.stackArray[top] = j;
+		}
 	}
-	
+
 	public long pop() {
-		int oldTop = top;
-		top--;
-		return stackArray[oldTop]; // the actual data is not removed, only the pointer is reduced
+		if (isEmpty()) {
+			System.out.println("The stack is already empty!");
+			return -1;
+		} else {
+			int oldTop = top;
+			top--;
+			return stackArray[oldTop]; // the actual data is not removed, only the pointer is reduced
+		}
 	}
-	
+
 	public long peak() {
 		return stackArray[top];
 	}
-	
+
 	public boolean isEmpty() {
 		return (top == -1);
 	}
-	
+
 	public boolean isFull() {
-		return (maxSize-1 == top);
+		return (maxSize - 1 == top);
 	}
 }
