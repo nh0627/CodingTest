@@ -4,7 +4,9 @@
  * https://leetcode.com/problems/maximum-subarray/
  */
 
+// Dynamic programming solution
 const maxSubArray = (nums) => {
+
     const memo = [nums[0]];
     let currMax = nums[0];
 
