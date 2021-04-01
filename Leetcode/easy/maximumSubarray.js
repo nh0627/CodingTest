@@ -5,6 +5,10 @@
  */
 
 // Dynamic programming solution
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
 const maxSubArray = (nums) => {
 
     const memo = [nums[0]];

@@ -3,6 +3,10 @@
  * https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
  */
 
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
 const findDisappearedNumbers = (nums) => {
     const hashSet = new Set();
     const answer = [];
